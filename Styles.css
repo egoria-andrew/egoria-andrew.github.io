@@ -1,0 +1,74 @@
+/* 1. Global Styles - Light & Crisp */
+body {
+    background-color: #f8f9fa; /* Very light grey, easier on the eyes than pure white */
+    color: #212529;            /* Dark charcoal text for high contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 2. Header - Professional & Centered */
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #ffffff;
+    border-bottom: 3px solid #007bff; /* Sharp Tech Blue */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+    color: #007bff; 
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+/* 3. Navigation - Clean Links */
+nav ul {
+    list-style: none;
+    padding: 20px 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #495057;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* 4. Project Card Design - The "Paper" Look */
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02); /* Very soft shadow */
+    transition: all 0.3s ease;
+}
+
+/* 5. Interactivity */
+.project-card:hover {
+    border-color: #007bff;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1); /* Soft blue glow */
+    transform: translateY(-3px);
+}
+
+.project-card h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+/* Styling the Keywords */
+strong {
+    color: #0056b3;
+}
