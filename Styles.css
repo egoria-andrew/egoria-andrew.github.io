@@ -72,3 +72,33 @@ nav a:hover {
 strong {
     color: #0056b3;
 }
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Or match your theme */
+}
+
+.contact-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+.contact-item a {
+    color: #007bff; /* Change to your brand color */
+    text-decoration: none;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
