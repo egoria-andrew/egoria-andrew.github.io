@@ -1,136 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egoria Andrew | Year 1 CS Student & IT Specialist</title>
+    
+    <!-- Link to Google Fonts (Inter and JetBrains Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Tech Portfolio | CS student and IT specialist</title>
-        <link rel="stylesheet" href="Styles.css">
-    </head>
+</head>
+<body>
 
-    <body>
-
-        <header>
-            <h1>EGORIA ANREW</h1>
-            <P>Computer Science student | Google IT Support Certified</P>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Technical Skills</a></li>
-                    <li><a href="#projects">Featured Projects</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <hr>
-
-        <main>
-
-            <section id="About">
-                <h2>About Me</h2>
-                <p>
-                    I am a first-year Computer Science student at Gulu University with a strong background
-                    in IT Support and System administration.
-                    Before starting my degree, I earned a <strong>Google Technical Support Professional Certificate</strong>
-                    and an ongoing <strong> IBM Software Engineering specialisation</strong>.
-                    I am passionate about solving hardware issues,deploying operating systems, and building secure, efficient,
-                    and user-friendly technology solutions.
-                    .
-                </p>
-            </section>
-
-            <section id="skills">
-                <h2>Technical Skills</h2>
-                <h3>Systems & Networking</h3>
-                <ul>
-                    <li><strong>OS Deployment:</strong>Installation and Configuration of windows and 
-                    kali linux (Dual-Boot)</li>
-                    <li><strong>Troubleshooting:</strong>Diagnostic repair software activation, and password recovery.</li>
-                    <li><strong>IT Support:</strong> System administration and network security fundamentals.</li>
-                </ul>
-                <h3>Programming and Web</h3>
-                <ul>
-                    <li><strong>Python:</strong>Logic-based scripting and Object Oriented Programming(OOP).</li>
-                    <li><strong>Web Develpment:</strong>HTML5 & currently mastering CSS3.</li>
-                    <li><strong>Graphics Scripting:</strong>Visual designs using Python Turtle.</li>
-                </ul>
-            </section>
-
-            <section id="projects" >
-                <h2>Featured Projects</h2>
-                <article class="project-card">
-                    <h3>Python ATM logic simulator</h3>
-                    <p>A console-based financial application  focused on data validation and session management.</p>
-                    <ul>
-                        <li><strong>State Management:</strong>Managed a live <code>balance</code>
-                         variable that updates dynamically based on user transactions.</li>
-                         <li><strong>Arithmetic Logic:</strong>Implemented four core banking features:
-                        Balance Check, Fund Transfers, Deposits, and Withdrawals.</li>
-                        <li><strong>Transaction Guardrails:</strong>Developed conditional logic (<code>if/elif/else</code>)
-                         to prevent negative transfers and overdrafts.</li>
-                         <li><strong>User Interface:</strong>Utilized <code>f-string</code> formatting and string methods to 
-                        create a clean, readable terminal menu.</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>User Authentication Simulator</h3>
-                    <p>A python security script designed to simulate a secure system login and credential validation process.</p>
-                    <ul>
-                        <li><strong>Credential Verifiction:</strong>Uses conditional logic to compare 
-                        user inputs against stored "authorized" credentials.</li>
-                        <li><strong>Brute-Forc prevention:</strong>Implemented a counter within a <code>while</code>
-                        loop to limit the number of login attempts before the system "locks".</li>
-                        <li><strong>User Feedback:</strong>Provides dynamic responses for successful logins 
-                        versus  incorrect password errors.</li>
-                        <li><strong>Security Logic:</strong>Focused on the fundamental "if-this-then-that" logic used in real-world Authentication systems.</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-    <h3>System Deployment & Technical Support Service</h3>
-    <p>A hands-on technical initiative providing operating system solutions and hardware troubleshooting for university peers.</p>
-    <ul>
-        <li><strong>Multi-OS Provisioning:</strong> Managed the installation and configuration of Windows and Kali Linux environments, including complex dual-boot setups.</li>
-        <li><strong>Disk Management:</strong> Performed manual disk partitioning and file system allocation to ensure system stability and performance.</li>
-        <li><strong>Security Recovery:</strong> Utilized administrative tools to perform system password resets and software activations for locked-out users.</li>
-        <li><strong>Hardware Diagnostics:</strong> Troubleshot various computer issues, providing software-based solutions and optimization for diverse hardware configurations.</li>
-    </ul>
-</article>
-
-            </section>
-
-        </main>
-        <hr>
-        <footer>
-              <section id="contact" class="contact-section">
-    <div class="container">
-        <h2>Get In Touch</h2>
-        <p>I'm currently open to new opportunities and collaborations!</p>
+    <!--  Navigation Bar -->
+    <header class="nav-bar">
+        <div class="logo">
+            <img src="assets/drew.jpg" alt="egoria andrew - Profile photo">
+            <h3>EGORIA ANDREW</h3>
+        </div>
         
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="icon">📧</span>
-                    <p><strong>Email:</strong> <a href="mailto:egoriaandrew3@gmail.com">egoriaandrew3@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">📞</span>
-                    <p><strong>Phone:</strong> <a href="tel:+256782222306">+256782222306</a></p>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">📍</span>
-                    <p><strong>Location:</strong> Pece-Laroo Division, Gulu City, Uganda</p>
-                </div>
-            </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <div class="social-links">
-                <a href="https://github.com/egoria-andrew" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    <!--Hero section-->
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>BUILDING SECURE SYSTEMS & SCALABLE SOLUTIONS</h1>
+            <p class="hero-subtitle">Google Certified IT Support | IBM Software Engineering Scholar</p>
+
+            <div class="cta-button">
+                <a href="#projects" class="cta-primary">View My Work</a>
+                <a href="https://wa.me/256782222306" class="cta-secondary" target="_blank">Contact Me</a>
             </div>
         </div>
-    </div>
-              </section>
-        </footer>
-    </body>
 
+        <div class="hero-image">
+            <img src="assets/drew.jpg" alt="egoria andrew - Profile photo">
+        </div>
+    </section>
+
+    <!--About section-->
+    <section class="about" id="about">
+        <h2 class="about-header">About Me</h2>
+        <div class="about-container">
+            <div class="about-facts">
+                <h3>Quick Facts</h3>
+                <ul>
+                    <div class="about-pills">
+                        <img src="assets/education.svg" alt="education icon" class="tech-icon">
+                        <div class="about-text">
+                            <li><strong>Education:</strong></li>
+                            <p class="pill-text">B.Sc in Computer Science (Ongoing)</p>
+                        </div>
+                    </div>
+
+                    <div class="about-pills">
+                        <img src="assets/badge.svg" alt="Certification Icon" class="tech-icon">
+                        <div class="about-text">
+                            <li><strong>Certifications:</strong></li>
+                            <p class="pill-text">Google IT Support , IBM SE</p>
+                        </div>
+                    </div>
+                    <div class="about-pills">
+                        <img src="assets/location.svg" alt="location pin Icon" class="tech-icon">
+                        <div class="about-text">
+                            <li><strong>Location: </strong></li>
+                            <p class="pill-text">Gulu University / Gulu City, Uganda</p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="about-story">
+                <h2>From Troubleshooting to Building</h2>
+            
+                <p>
+                    I started my journey in Tech with a focus on problem-solving, earning my <strong>Google IT Support
+                    Professional Certificate</strong>.
+                </p>
+                <p>
+                    Today, as a Computer Science student, I’m combining computer security principles, networking basics, 
+                    Python Object Oriented Programming, web technologies and  troubleshooting foundation with software 
+                    engineering principles through my studies in class  and <strong>IBM’s Software Engineering</strong> curriculum.
+                </p>
+                <p>
+                    My goal is to build software that is as reliable as the systems I support.
+                    When am not coding, I am busy learning a new skill or helping a fellow student fix their 
+                    laptop or viewing requests for service submitted through my Campus IT 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Technical Toolkit-->
+
+    <section class="skills-sec" id="skills">
+
+        <div class="skills-container">
+
+            <!--Section Header-->
+            <div class="section-header">
+                <h2>Technical Toolkit</h2>
+                <p class="skills-sub">Proficiencies gained through university coursework, Google, and IBM</p>
+            </div>
+
+            <!--Main grid cpntainer for the 3 cards-->
+            <div class="skills-grid">
+                <!--Card 1: Languages and web-->
+                <article class="skill-card">
+                    <h3>Languages & Web</h3>
+                    <div class="pill-group">
+
+                        <div class="skill-pill">
+                            <img src="assets/python-logo.svg" alt="Official Python Logo" class="tech-icon">
+                            <div>
+                                <h4>Python:</h4><br>Object Oriented, Procedural & GUI programmng.
+                            </div>
+                        </div>
+
+                        <div class="skill-pill">
+                            <img src="assets/html-logo.svg" alt="Official HTML5 Logo" class="tech-icon">
+                            <div>
+                                <h4>HTML5:</h4><br>Structure & Semantic Markup
+                            </div>
+                        </div>
+
+                        <div class="skill-pill">
+                            <img src="assets/css3-logo.svg" alt="Official CSS3 Logo" class="tech-icon">
+                            <div>
+                                <h4>CSS3:</h4><br>Responsive layouts & styling
+                            </div>
+                        </div>
+
+                        <div class="skill-pill">
+                            <img src="assets/js-logo.svg" alt="Official JavaScript Logo" class="tech-icon">
+                            <h4>JavaScript:</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Card 2: IT & Infrastructure-->
+                <article class="skill-card">
+                    <h3>IT & Infrastructure</h3>
+                    <div class="pill-group">
+                    
+                        <span class="skill-pill">
+                            <img src="assets/hardware.svg" alt="Hardware Icon" class="tech-icon">
+                            <h4>Hardware Troubleshooting</h4>
+                        </span>
+
+                        <span class="skill-pill">
+                            <img src="assets/network.svg" alt="Networking Icon" class="tech-icon">
+                            <h4>Network Basics</h4>
+                        </span>
+
+                        <span class="skill-pill">
+                            <img src="assets/computer.svg" alt="Operatingsystem Icon" class="tech-icon">
+                            <h4>Operating Systems Deployment(Windows, Linux & MacOS)</h4>
+                        </span>
+                    </div>
+                </article>
+
+                <!--Card 3: Tools & Engineering-->
+                <article class="skill-card">
+                    <h3>Tools & Engineering</h3>
+                    <div class="pill-group">
+                    
+                        <span class="skill-pill">
+                            <img src="assets/github.svg" alt="Github Icon" class="tech-icon">
+                            <h4>Git/Github</h4>
+                        </span>
+
+                        <span class="skill-pill">
+                            <img src="assets/vscode.svg" alt="Vscode Icon" class="tech-icon">
+                            <h4>VS Code/Google AtiGravity</h4>
+                        </span>
+
+                        <span class="skill-pill">
+                            <img src="assets/cycle.svg" alt="SDLC Icon" class="tech-icon">
+                            <h4>Software Development LifeCycle (SDLC)</h4>
+                        </span>
+
+                        <span class="skill-pill">
+                            <img src="assets/agile-logo.svg" alt="Agile Icon" class="tech-icon">
+                            <h4>Agile Methodology</h4>
+                        </span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!--The Pojects section-->
+    <section id="projects" class="projects-section">
+        <div class="project-container">
+            <div class="project-header">
+                <h2>Featured Project</h2>
+                <p class="project-sub">Campus IT Support Hub</p>
+            </div>
+
+            <div class="project-split">
+                <div class="project-visual">
+                    <div class="browser-mockup">
+                        <img src="assets/it-support.jpg" alt="Desktop browser mockup of the Campus IT Support website interface">
+                    </div>
+                </div>
+
+                <div class="project-narrative">
+                    <div class="narrative-block">
+                        <h3>The Challenge</h3>
+                        <p>Students at Gulu University lacked a central, real-time method to request hardware diagnostics and system support, causing significant delays in resolution workflows.</p>
+                    </div>
+
+                    <div class="project-tags">
+                        <ul>
+                            <li><strong>Objective:</strong> Designed and deployed a responsive front-end portal featuring a modular service directory. Integrated an automated request workflow to systematically organize and streamline device ticketing.</li>
+                            <li><strong>Tech stack:</strong> I utilized  HTML5. CSS3  & Javascript for responsive design and  Github for version control.</li>
+                            <li><strong>Key Features:</strong> Provides easy access to support resources and status updates</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-cta">
+                        <a href="https://egoria-andrew.github.io/andie-tech-solutions/" class="btn-live" target="_blank">Live Site</a>
+                        <a href="https://github.com/egoria-andrew/andie-tech-solutions" class="btn-code" target="_blank">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="backend-section">
+        <div class="logic-container">
+            <!--ATM Simulator-->
+            <div class="section-header">
+                <h2>BACKEND LOGIC PROJECT</h2>
+                <p class="section-sub">Python ATM Simulator</p>
+            </div>
+
+            <div class="logic-split">
+
+                <div class="logic-process">
+                    <p class="logic-intro">Implemented  a secure PIN verification system and managed real-time balance calculations using conditional logic</p>
+
+                    <h4>Features:</h4>
+                    <ul class="logic-features">
+                        <li>PIN-based Authentication</li>
+                        <li>Deposit/Withdrawal Calculation</li>
+                        <li>Error handling (Insufficient funds alert)</li>
+                    </ul>
+
+                    <h4>Future Scope:</h4>
+                    <p class="logic-scope">Next Version will implement File I/O using JSON for data persistence between sessions.</p>
+
+                    <a href="https://github.com" class="btn-code" target="_blank">Source Code</a>
+                </div>
+
+                <div class="logic-terminal">
+                    <div class="code-screenshot">
+                        <img src="assets/terminal.png" alt="The logic mockup for ATM simulator" class="code-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-demo">
+                <h4>Skills Demonstrated</h4>
+                <div class="ribbon-items">
+                        <div class="ribbon-item">
+                            <img src="assets/python-logo.svg" alt="Python Logo" class="tech-icon">
+                            <p>Python OOP(Object Oriented Programming)</p>
+                        </div>
+                    
+                        <div class="ribbon-item">
+                            <img src="assets/data.svg" alt="Processor Icon" class="tech-icon">
+                            <p>Data Validation</p>
+                        </div>
+
+                        <div class="ribbon-item">
+                            <img src="assets/file-error.svg" alt="error processing Icon" class="tech-icon">
+                            <p>Error Handling</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!--Professional certificates-->
+    <section class="credentials-section" id="credentials">
+
+        <div class="credentials-container">
+
+            <div class="credentials-header">
+                <h2>PROFESSIONAL CREDENTIALS</h2>
+                <p class="credentials-sub">Industry recognized certificates</p>
+            </div>
+
+            <div class="credentials-grid">
+
+                <!--Cert 1: Google IT support-->
+                <article class="cert-card">
+                
+                    <h3>Google IT Support</h3>
+                    <div class="cert-wrapper">
+                        <!-- Placeholder image for the official Google Badge -->
+                        <img src="assets/it-badge.png" alt="Google IT Support Professional Certificate Badge" class="cert-img">
+                    </div>
+
+                    <a href="https://coursera.com" class="btn-verify" target="_blank">Verify Badge</a>
+
+                    <div class="cert-info">
+                
+                        <div class="cert-skills">
+                            <h4>Key Skills:</h4>
+                        <ul>
+                            <li>Technical Support</li>
+                            <li>Computer Networking</li>
+                            <li>Operating Systems</li>
+                            <li>System's Administration</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!--Cert 1: IBM Software Engineering-->
+            <article class="cert-card">
+                
+                <h3>IBM Software Engineering</h3>
+                <div class="cert-wrapper">
+                    <!-- Placeholder image for the official Google Badge -->
+                    <img src="assets/IBM Logo.webp" alt="IBM Software Engineering Foundations Certificate Badge" class="cert-img">
+                </div>
+
+                <h4 class="btn-verify">In Progress</h4>
+
+                <div class="cert-info">
+                
+                    <div class="cert-skills">
+                        <h4>Key Skills:</h4>
+                        <ul>
+                            <li>Core Software Engineering</li>
+                            <li>Git & Github</li>
+                            <li>Web Fundamentals</li>
+                            <li>Application Security</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!--The Footer & Contact Hub Container -->
+    <footer id="contact" class="site-footer">
+
+        <!-- The Final Call-To-Action (CTA) -->
+        <div class="footer-cta">
+            <h2>Let's Build Something Together</h2>
+            <p class="footer-sub">Available for internship opportunities and collaborative development pipelines.</p>
+        </div>
+
+        <!-- The Technical Social Icons Grid Wrapper -->
+        <div class="footer-socials">
+            <!-- LinkedIn Anchor Link -->
+            <a href="https://linkedin.com" class="social-link" target="_blank" aria-label="Connect on LinkedIn">
+                <img src="assets/in-logo.svg" alt="LinkedIn Icon" class="footer-i"><!-- Placeholder for LinkedIn Icon -->
+            </a>
+        
+            <!-- GitHub Anchor Link -->
+            <a href="https://github.com/egoria-andrew" class="social-link" target="_blank" aria-label="View Source Code on GitHub">
+                <img src="assets/github.svg" alt="github Icon" class="footer-icon"> <!-- Placeholder for GitHub Icon -->
+            </a>
+        
+            <!-- Mailto Protocol Link for direct email workflows -->
+            <a href="mailto:egoriaandrew3@email.com" class="social-link" aria-label="Send an Email">
+                <img src="assets/gmail.svg" alt="gmail Icon" class="footer-i"> <!-- Placeholder for Email Icon -->
+            </a>
+        </div>
+
+        <!-- High-Visibility Resume Download Trigger Button -->
+        <div class="footer-resume">
+            <a href="assets/resume.pdf" class="btn-download" download="YourName_CS_Resume.pdf">Download My Resume</a>
+        </div>
+
+        <!-- Structural Copyright & Architectural Note -->
+        <div class="footer-copyright">
+            <p>&copy;2026 Your Name. Engineered from scratch with Semantic HTML5, CSS3 &amp; JavaScript.</p>
+        </div>
+
+    </footer>
+
+</body>
 </html>

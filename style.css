@@ -1,0 +1,994 @@
+:root {
+    --bg-primary: #F8FAFC;       /* Soft White Canvas */
+    --bg-secondary: #FFFFFF;     /* Pure White Card Base */
+    --bg-zebra: #F1F5F9;         /* Light Grey for Alternating Sections */
+    --text-heading: #0F172A;     /* Deep Space Navy */
+    --text-body: #475569;        /* Muted Slate Grey */
+    --accent-primary: #2563EB;   /* Active Royal Blue for Primary Buttons */
+    --accent-secondary: #1D4ED8; /* Darker Blue for Hover Effects */
+    --border-color: #E2E8F0;     /* Faint Grey for Separation Lines */
+    
+    /* Box Shadow - Large blur, low opacity for a natural, soft paper look */
+    --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+    
+    /* Layout & Typography Core Standards */
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Keeps layouts perfectly predictable */
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for navbar anchor links */
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-primary);
+    font-family: var(--font-sans);
+    color: var(--text-body);
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+/* Headings Base Configuration */
+h1, h2, h3, h4 {
+    color: var(--text-heading);
+    font-family: var(--font-sans);
+    font-weight: 700;
+}
+
+/* HTML Link Base Configuration */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+/* HTML List Base Configuration */
+ul, ol {
+    list-style: none;
+}
+
+
+.nav-bar {
+    
+    background-color: var(--bg-secondary); /* Pure White background */
+    border-bottom: 1px solid var(--border-color); /* Faint grey line at bottom */
+    position:sticky;   /* Keeps the bar stuck to the top of the screen as you scroll */
+    width: 100%;       /* Spans across the full width of the viewport */
+    top: 0;
+    z-index: 1000;     /* Ensures it floats safely on top of all other content layers */
+    max-width: auto; /* Pins the main content width so it doesn't stretch on wide screens */
+    margin: 0 auto;    /* The Magic Trick: Centers this container perfectly on the screen */
+    padding: 20px 8%;   /* Creates a 24px safe margin so text never hugs the screen walls */
+    display: flex;     /* Activates Flexbox: Pulls the logo and menu side-by-side */
+    justify-content: space-between; /* Pushes Logo to far left, Menu to far right */
+    align-items: center; /* Vertically centers the logo and text items in the middle of the 80px bar */
+}
+
+.nav-bar .logo {
+    display: flex;
+    font-size: 1.45rem; /* 20px modern sizing */
+    font-weight: 700;   /* Bold identity text */
+    color: var(--text-heading); /* Rich Deep Navy */
+    letter-spacing: -0.5px;
+}
+.nav-bar .logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+/* The Links Unordered List Container */
+.nav-menu {
+    display: flex;     /* Activates Flexbox inside the menu to sit links in a clean row */
+    gap: 32px;         /* Creates a perfect 32px spacing gap between each word link */
+}
+
+.nav-menu a {
+    font-weight: 600;   /* Semibold clean text */
+    font-size: 1rem; /* Balanced, readable modern size */
+    color: var(--text-body); /* Cool Slate Grey */
+}
+
+/* The Hover State: Interactive response when a recruiter moves their mouse over a link */
+.nav-menu a:hover {
+    border-bottom: 2px solid var(--accent-primary);
+    color: var(--accent-primary); /* Smoothly snaps link text color to Royal Blue */
+    padding: 3px;
+    
+}
+
+.hero {
+    min-height: calc(100vh - 80px); /* Makes the section fill the screen dynamically */
+    display: flex;
+    align-items: center;            /* Vertically centers the text and image columns */
+    background-color: var(--bg-primary);
+    padding: 60px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;       /* Activates side-by-side column positioning */
+    align-items: center;
+    gap: 60px;          /* Creates a clean spatial buffer between text and image */
+}
+
+/* Left Column: Text & Call-To-Action Operations */
+.hero-content {
+    flex: 1; /* Instructs the text block to expand and capture half the screen space */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;          /* Large 56px industry-grade display typography */
+    line-height: 1.15;
+    color: var(--text-heading);
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;         /* Balanced subtitle typography */
+    color: var(--text-body);
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* Button Layout Grouping */
+.cta-button {
+    display: flex;
+    gap: 16px; /* Spaces out your two buttons perfectly */
+}
+
+/* Primary View My Work Button */
+.cta-primary {
+    background-color: var(--accent-primary); /* Royal Blue */
+    color: var(--bg-primary);
+    padding: 10px 25px;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--card-shadow);
+}
+
+.cta-primary:hover {
+    background-color: var(--accent-secondary); /* Darker blue response on hover */
+}
+
+/* Secondary Contact Me Button */
+.cta-secondary {
+    background-color: transparent;
+    color: var(--accent-primary);
+    padding: 10px 28px;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--accent-primary); /* Royal Blue Outline */
+}
+
+.cta-secondary:hover {
+    background-color: var(--bg-zebra); /* Subtle grey layout highlight on hover */
+}
+
+/* Right Column: Profile Image Workspace */
+.hero-image {
+    flex: 1; /* Instructs the image block to expand and capture the other half of the screen space */
+    display: flex;
+    justify-content: center; /* Centers the image inside its 50% section boundaries */
+}
+
+.hero-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover; /* Protects your photograph aspect ratio from compression distortions */
+    border-radius: 50%; /* Trims the native square graphic into a clean, perfect profile circle */
+    border: 4px solid var(--white);
+    box-shadow: var(--card-shadow);
+}
+/*About section*/
+.about {
+    background-color: var(--bg-zebra); /* Alternate grey background stripe */
+    padding: 100px 0;                  /* Heavy vertical breathing room padding */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-header{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Master Layout Constraint Wrapper */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;         /* Pulls the facts card and story side-by-side */
+    gap: 20px;            /* Creates an optimal spatial buffer gap */
+    align-items: flex-start; /* Aligns items to the top edge profile boundary */
+}
+
+/* Left Column: The Quick Facts Card Dashboard */
+.about-facts {
+    flex: 1;               /* Tells the card to expand and take up 1 part of space */
+    background-color: var(--bg-secondary); /* Pure white background overlay */
+    padding: 32px;
+    border-radius: var(--radius-md); /* 12px rounded corner standard */
+    box-shadow: var(--card-shadow);  /* Soft natural natural grey drop shadow */
+    border: 1px solid var(--border-color);
+}
+
+.about-facts h3 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--bg-zebra); /* Clean title divider border line */
+}
+
+/* Nested Pill Items inside your card layout list */
+.about-pills {
+    margin-bottom: 20px;
+    border: 1px solid #e5e5e6;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.15), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+}
+
+.about-pills strong {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase; /* Modern uppercase label style */
+    letter-spacing: 1px;
+    color: var(--text-body);
+    margin-bottom: 2px;
+}
+
+.pill-text {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-heading); /* High-contrast text values */
+}
+
+/* Right Column: The Main Bridge Narrative Block */
+.about-story {
+    flex: 2;               /* Story block expands to capture double the space of the card */
+    background-color: var(--bg-secondary);
+    padding: 32px 32px 79px 32px;
+    border-radius: var(--radius-md); /* 12px rounded corner standard */
+    box-shadow: var(--card-shadow);  /* Soft natural natural grey drop shadow */
+    border: 1px solid var(--border-color);
+}
+
+.about-story h2 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+.about-story p {
+    font-size: 1.125rem;    /* Clear, comfortable long-reading font scale */
+    color: var(--text-body);
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+                            TECHNICAL TOOLKIT LAYOUT
+   ========================================================================== */
+
+.skills-sec {
+    background-color: var(--bg-primary); /* Soft off-white background */
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Master Layout Constraint Wrapper */
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Section Header Spacing */
+.section-header {
+    text-align: center; /* Centers your section titles like our clean blueprint */
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-sub {
+    font-size: 1.125rem;
+    color: var(--text-body);
+}
+
+/* The 3-Column Card Layout Matrix */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 32px; /* Perfect spatial spacing between the cards */
+}
+
+/* The Core Card Component Styling */
+.skill-card {
+    background-color: var(--bg-secondary); /* Pure White Card Canvas */
+    padding: 32px;
+    border-radius: var(--radius-md);       /* 12px rounded corner standard */
+    box-shadow: var(--card-shadow);        /* Soft natural paper drop shadow */
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-heading);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--bg-zebra); /* Subtle separator rule line */
+}
+
+/* The Nested Skills Container Group */
+.pill-group {
+    display: flex;
+    flex-direction: column; /* Stacks your skill lines neatly top-to-bottom */
+    gap: 16px;              /* Spacing between individual skill bullet rows */
+}
+
+/* The Skill Pill Alignment System */
+.skill-pill {
+    display: flex;
+    border: 1px solid #e5e5e6;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: flex-start; /* Keeps multi-line descriptions aligned with the SVG icon */
+}
+
+/* Structuring the real SVG logo image layout badges */
+.skill-pill .tech-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-right: 12px; /* Adds spatial separation before the text starts */
+    flex-shrink: 0;     /* Critical: Prevents the browser from squeezing your logo graphic */
+}
+
+/* Small Typography Tweaks Inside the Cards */
+.skill-pill h4 {
+    display: inline;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-right: 4px;
+}
+
+/* ==========================================================================
+                            FEATURED PROJECT LAYOUT
+   ========================================================================== */
+
+.projects-section {
+    background-color: var(--bg-zebra); /* Alternate grey background stripe */
+    padding: 50px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Master Layout Constraint Wrapper */
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Section Intro Header Spacing */
+.project-header {
+    margin-bottom: 5px;
+}
+
+.project-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.project-sub {
+    font-size: 1.25rem;
+    color: var(--text-body);
+    font-weight: 400;
+}
+
+/* The Horizontal Split Framework (Desktop Column Alignment) */
+.project-split {
+    display: flex;
+    align-items: center; /* Vertically centers the visual block and text block */
+    gap: 50px;           /* Creates an optimal spatial buffer gap between columns */
+}
+
+/* Left Column: Visual Mockup Optimization Workspace */
+.project-visual {
+    flex: 1;          /* Image block captures a slightly wider footprint (approx 55%) */
+}
+
+.browser-mockup {
+    background-color: var(--bg-secondary); /* White frame wrapper foundation */
+    border-radius: var(--radius-md);       /* 12px rounded corner standard */
+    padding: 2px;                          /* Small padding mimics a clean display bezel */
+    box-shadow: var(--card-shadow);        /* Natural soft paper drop shadow shadow */
+    border: 1px solid var(--border-color);
+    overflow: hidden;                      /* Clips internal image edges to the border radius */
+}
+
+.browser-mockup img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: calc(var(--radius-md) - 8px); /* Inner adjustment keeping rounding uniform */
+}
+
+/* Right Column: Narrative Text Block Container */
+.project-narrative {
+    flex:0.8;            /* Text block captures approx 45% footprint */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;          /* Clean spacing layout row blocks */
+}
+
+.narrative-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--text-heading);
+}
+
+.narrative-block p {
+    font-size: 1.1rem;
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+/* Project Tech Specifications (Lists Styling Cleanout) */
+.project-tags ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-tags li {
+    font-size: 1.05rem;
+    color: var(--text-body);
+}
+
+.project-tags strong {
+    color: var(--text-heading);
+    font-weight: 700;
+}
+
+/* Project Action CTA Buttons Grid Row */
+.project-cta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 12px;
+}
+
+/* Live Site Button Styling */
+.btn-live {
+    background-color: var(--accent-primary); /* Royal Blue Link Fill */
+    color: var(--bg-primary);
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--card-shadow);
+}
+
+.btn-live:hover {
+    background-color: var(--accent-secondary);
+}
+
+/* GitHub Source Text Action Link Styling */
+.btn-code {
+    background-color: transparent;
+    color: var(--accent-primary);
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--accent-primary); /* Border matching active brand color */
+}
+
+.btn-source:hover {
+    background-color: var(--bg-secondary); /* Clean white tint block fill on hover */
+}
+
+/* ==========================================================================
+                            BACKEND LOGIC PROJECT LAYOUT
+   ========================================================================== */
+
+.backend-section {
+    background-color: var(--bg-primary); /* Clean soft off-white canvas */
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Master Layout Constraint Wrapper */
+.logic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* The Horizontal Split Framework (Desktop Alignment) */
+.logic-split {
+    display: flex;
+    align-items: flex-start; /* Neatly aligns text top and image mockup top */
+    gap: 64px;               /* Creates a clean spatial gap between columns */
+    margin-bottom: 50px;     /* Leaves a vertical breathing gap for the ribbon below */
+}
+
+/* Left Column: System Narratives (50% Width) */
+.logic-process {
+    flex: 1;
+}
+
+.logic-intro {
+    font-size: 1.15rem;
+    color: var(--text-body);
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.logic-process h4 {
+    font-size: 1.2rem;
+    color: var(--text-heading);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Features List Styling Rules */
+.logic-features {
+    margin-bottom: 32px;
+}
+
+.logic-features li {
+    font-size: 1.05rem;
+    color: var(--text-body);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* Professional touch: Custom royal blue bullet indicators */
+.logic-features li::before {
+    content: "•";
+    color: var(--accent-primary); /* Royal Blue */
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    font-size: 1.25rem;
+}
+
+.logic-scope {
+    font-size: 1.05rem;
+    color: var(--text-body);
+    margin-bottom: 32px;
+}
+
+/* Source Code Link Button */
+.btn-code {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--accent-primary);
+    padding: 10px 25px;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--accent-primary);
+}
+
+.btn-code:hover {
+    background-color: var(--bg-secondary); /* Tint block white overlay on hover */
+}
+
+/* Right Column: Code Screenshot Bezel Wrapper (50% Width) */
+.logic-terminal {
+    flex: 1;
+}
+
+.code-screenshot {
+    background-color: var(--bg-secondary); /* Pure white background foundation bezel */
+    border-radius: var(--radius-md);       /* 12px rounded corner standard */
+    padding: 8px;                          /* Border padding looks like hardware casing */
+    box-shadow: var(--card-shadow);        /* Natural natural soft paper drop shadow */
+    border: 1px solid var(--border-color);
+    overflow: hidden;                      /* Guarantees the image corners clip cleanly */
+}
+
+.code-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: calc(var(--radius-md) - 8px); /* Inner adjustment tracking bezel borders */
+}
+
+/* ==========================================================================
+                    HORIZONTAL DEMONSTRATED RIBBON COMPONENT
+   ========================================================================== */
+
+.skills-demo {
+    background-color: var(--bg-secondary); /* Pure white ribbon base container */
+    padding: 24px 40px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.skills-demo h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    
+}
+
+/* Layout container managing row formatting inside the ribbon banner */
+.ribbon-items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ribbon-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px; /* Spaces out the graphic logo badge from the category text label */
+}
+
+/* Layout controls managing your SVG logo vectors inline */
+.ribbon-item .tech-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.ribbon-item p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+
+/* Temporary Image Layout Controller for testing icons */
+.tech-icon {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* ==========================================================================
+                        PROFESSIONAL CREDENTIALS LAYOUT
+   ========================================================================== */
+
+.credentials-section {
+    background-color: var(--bg-zebra); /* Alternate grey background stripe */
+    padding: 50px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Master Layout Constraint Wrapper */
+.credentials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2px 5px;
+}
+
+/* Two-Column Certification Grid */
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 50px; /* Spatial buffer margin gap between the two cards */
+}
+.credentials-header{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+.credentials-header h2{
+    font-size: 2em;
+}
+/* The Core Credential Card Layout Frame */
+.cert-card {
+    background-color: var(--bg-secondary); /* Pure White Card Canvas */
+    padding: 2px ;
+    border-radius: var(--radius-md);       /* 12px rounded corner standard */
+    box-shadow: var(--card-shadow);        /* Soft natural paper drop shadow */
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;                   /* Centers all contents inside the card */
+    text-align: center;
+    padding: 50px;
+}
+
+/* Circular Graphic Badge Container Space Holder */
+.cert-wrapper {
+    width: 200px;
+    height: 200px;
+    background-color: var(--bg-primary); /* Soft grey placeholder base circle */
+    border-radius: 10%;                  /* Trims box into a perfect circle */
+    margin: 24px;
+    border: 2px dashed var(--border-color); /* Clean dash framework pattern indicator */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Real Logo Image Rules inside your Verification Circles */
+.cert-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* High-Contrast Verify Action Trigger Button */
+.btn-verify {
+    display: inline-block;
+    background-color: var(--accent-primary); /* Royal Blue Link Fill */
+    color: var(--bg-primary);
+    padding: 3px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 14px;
+    width: 30%; /* Makes button wide inside the card width limitations */
+    max-width: 200px;
+}
+
+.btn-verify:hover {
+    background-color: var(--accent-secondary);
+}
+
+/* Inner Key Skills Breakdown Structure Matrix */
+.cert-skills {
+    width: 100%;
+    text-align: left; /* Flips the list alignment back to left-read standard */
+    border-top: 2px solid var(--bg-zebra); /* Clean horizontal separator divider rule */
+    padding-top: 2px;
+}
+
+.cert-skills h4 {
+    font-size: 1.1rem;
+    color: var(--text-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+.cert-skills ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Splits skills internally into 2 columns */
+    gap: 1px 1px;
+}
+
+.cert-skills li{
+    font-size: 1rem;
+    color: var(--text-body);
+    display: flex;
+    align-items: center;
+}
+
+/* Custom blue indicator dots for certification lists */
+.cert-skills li::before {
+    content: "✓"; /* Clean verify checkmark symbol */
+    color: #10B981; /* Success Mint Green indicator hue */
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+                            SITE FOOTER & CONTACT HUB
+   ========================================================================== */
+
+.site-footer {
+    background-color: var(--text-heading); /* Reverts to deep space navy for a grounded footer */
+    color: var(--bg-primary);             /* Flips text to light silver/white for dark contrast */
+    padding: 20px 0 20px 0;
+    text-align: center;                    /* Enforces your Figma centered alignment standard */
+}
+
+.footer-cta h2 {
+    color: var(--white);
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.footer-sub {
+    color: #94A3B8; /* Muted slate tint easy to read on dark backgrounds */
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto; /* Centers the subtitle block boundaries */
+}
+
+/* Social Network Icon Matrix Layout Row */
+.footer-socials {
+    display: flex;
+    justify-content: center; /* Centers the icon row horizontally */
+    align-items: center;
+    gap: 24px;               /* 24px spatial separation gap between circles */
+    margin-bottom: 48px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;             /* Large touch targets for mobile thumbs and desktop mice */
+    height: 56px;
+    background-color: #1E293B; /* Subtle dark slate button bases */
+    border-radius: 50%;      /* Changes boxes to perfect layout circles */
+    border: 1px solid #334155;
+}
+
+/* Real SVG internal icon configuration styling rules */
+.footer-socials .footer-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: invert(100%); /* Flips your black SVG download logos into pure white vectors */
+    transition: var(--transition-smooth);
+}
+.footer-socials .footer-i{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: var(--transition-smooth);
+}
+
+/* Interactive feedback loop animations on icon hover states */
+.footer-socials a:hover {
+    transform: translateY(-4px);            /* Elegant lifting animation */
+}
+
+/* High-Contrast Resume PDF Download Button Casing */
+.footer-resume {
+    margin-bottom: 30px;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--accent-primary); /* Solid high-contrast white background */
+    color: var(--white);      /* Rich deep navy text */
+    padding: 18px 36px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.btn-download:hover {
+    background-color: var(--text-body); /* Shifts to soft light grey on hover click */
+    transform: scale(1.02);             /* Subtle scaling response */
+}
+
+/* Structural Bottom Copyright Meta Text */
+.footer-copyright {
+    font-size: 1rem;
+    color: #64748B;
+    border-top: 1px solid #1E293B; /* Border separation line */
+    padding-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================================================
+                RESPONSIVE MOBILE ARCHITECTURE (MAX-WIDTH: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* Global Typography Reduction for Smaller Screens */
+    html {
+        font-size: 14px; /* Uniformly scales down all padding and spacing slightly */
+    }
+
+    /* --- Section 1: Navigation Bar Stacking --- */
+    .nav-bar {
+        flex-direction: column; /* Stacks your Name on top of your navigation menu links */
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .nav-menu {
+        gap: 16px; /* Squeezes the links closer together so they fit on a mobile display */
+    }
+
+    /* --- Section 2: Hero Section Stacking --- */
+    .hero {
+        flex-direction: column-reverse; /* Clever Trick: Puts your Profile Photo ON TOP of your text */
+        text-align: center;            /* Centers your text titles for mobile balance */
+    }
+
+    .hero-content h1 {
+        font-size: 2.25rem; /* Shrinks the massive headline down so it doesn't leak off the glass */
+    }
+
+    .cta-button {
+        justify-content: center; /* Centers your buttons under your headline */
+    }
+
+    .hero-image img {
+        width: 250px; /* Scales down your profile photo so it fits comfortably on a phone */
+        height: 250px;
+        margin-top: 50px;
+    }
+
+    /* --- Section 3: About Me Stacking --- */
+    .about-container {
+        flex-direction: column; /* Stacks your Quick Facts card above your Bridge Story */
+        gap: 40px;
+    }
+
+    .about-facts {
+        width: 100%; /* Forces the facts box to take up the full screen width minus margins */
+    }
+
+    /* --- Section 4: Technical Toolkit Stacking --- */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Crucial: Swaps your 3-column desktop grid into a 1-column stack */
+        gap: 24px;
+    }
+
+    /* --- Section 5 & 6: Projects & Backend Layout Stacking --- */
+    .project-split, .logic-split {
+        flex-direction: column; /* Collapses side-by-side images and text layout columns vertically */
+        gap: 32px;
+    }
+
+    
+
+    .skills-demo{
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .ribbon-items {
+        flex-direction: column; /* Stacks your Python, CPU, and Linux pills vertically */
+        gap: 16px;
+    }
+
+    /* --- Section 7: Credentials Stacking --- */
+    .credentials-grid {
+        grid-template-columns: 1fr; /* Swaps your 2-column certificate layout into a 1-column stack */
+        gap: 24px;
+    }
+
+    .cert-skills ul {
+        grid-template-columns: 1fr; /* Internal checkmarks collapse into a clean single list */
+    }
+    .cert-card{
+        margin: 20px;
+    }
+
+}
+
