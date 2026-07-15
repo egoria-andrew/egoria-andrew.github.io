@@ -826,7 +826,7 @@ ul, ol {
 }
 
 /* Responsive Mobile Layout (max-width: 768px) */
-@media (max-width: 600px) {
+@media (max-width: 820px) {
 
     html {
         font-size: 14px;
